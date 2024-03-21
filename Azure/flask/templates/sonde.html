@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block title %}Home {% endblock%}
+{%block content %}
+
+<head>
+    <title></title>
+    <style>
+    </style>    
+    <script type="module" src="https://unpkg.com/@googlemaps/extended-component-library@0.3"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script type="module" src='{{ url_for("static", filename="index.js") }}'></script>
+    <link rel="stylesheet" type="text/css" href='{{ url_for("static", filename="style.css") }}' />
+    
+
+</head>
+<h1 class="text-center" >Vandkvaliteten i de danske fjorde!</h1>
+<body>
+        
+    <div class="row gx-2">
+        <div class="col">
+            
+            <img style="width: 150%; display: block;  margin-left: 0px;" alt="graph showing the water quality at different levels"  src='data:image/png;base64,{{sonde_partikel}}'/>
+        </div>
+        <div class="col" >
+            <gmp-map center="55.9396761, 11.1155848" zoom="6.45" map-id="DEMO-MAP-ID" id="marker-click-event-example">
+                <gmp-advanced-marker
+                position="{{sonde_gps[0]}},{{sonde_gps[1]}}"
+                title = "sonde {{sonde_gps[2]}}"
+                gmp-clickable
+                ></gmp-advanced-marker>
+            </gmp-map>
+            <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2G8mhrS3GylLrokLiVwGQ1_HmsHZ2EWA&callback=initMap&libraries=marker&v=beta"
+            defer
+            ></script>
+        </div>
+      </div>
+      <div class="container">
+        <h2 class="text-center" style="padding-top: 5%;" >Vandkvalitet</h2>
+        <div class="card">
+            <div class="card-body">
+                <p> NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND 
+                    NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND 
+                    NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND 
+                    NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND 
+                    NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND 
+                    NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND 
+                    NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND 
+                    NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND 
+                    NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND 
+                    NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND 
+                    NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND 
+                    NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND 
+                    NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND 
+                    NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND 
+                    NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND 
+                    NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND NOGET KLOGT OM VAND 
+                    
+                </p>      
+            </div>
+          </div> 
+      </div>
+        
+</body>
+{%endblock%}
