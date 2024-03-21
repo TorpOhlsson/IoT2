@@ -14,12 +14,12 @@ ser = serial.Serial(
   bytesize=serial.EIGHTBITS
 )
 
-broker = "172.190.139.34"
+broker = "XXXXXXXXXXXXXX"
 port = 1883
 topic = "test"
 client_id = f'python-mqtt123_asd'
-username = 'admin'
-password = 'Admin1234567'
+username = 'XXXXXX'
+password = 'XXXXXX'
 
 while True:
     data = ser.readline().decode("utf-8").strip()

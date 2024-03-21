@@ -1,12 +1,12 @@
 import paho.mqtt.client as mqtt
 import sqlite3
 
-broker = "172.190.139.34"
+broker = "XXXXXXXXXXX"
 port = 1883
 topic = "test"
 client_id = f'python-mqtt123_asd'
-username = 'admin'
-password = 'Admin1234567'
+username = 'XXXXXXXXXXX'
+password = 'XXXXXXXXXX'
 
 def on_connect(client, userdata, flags, reason_code, properties):
     print(f"Connected with result code {reason_code}")
